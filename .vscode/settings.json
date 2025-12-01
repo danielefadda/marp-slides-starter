@@ -1,5 +1,6 @@
 {
   "markdown.marp.themes": [
+    "/template/themes/base.scss",
     "/template/themes/master.scss",
     "/template/themes/alma.scss"
   ],

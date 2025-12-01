@@ -1,7 +1,7 @@
 ---
 marp: true
 theme: master
-header: 'Marp Template Demo'
+header: '<strong>Marp Template Demo</strong> | Daniele Fadda'
 footer: "Esempio d'uso <mark>DEMO</mark>"
 paginate: true
 ---
@@ -57,7 +57,128 @@ Il template include:
 <!-- _class: chapter -->
 <!-- _paginate: skip -->
 
-# 1. Layout di Base
+# 1. Layout di Base (sections)
+
+---
+
+<!-- _class: columns-1 -->
+
+## Layout a Singola Colonna
+
+Questo layout usa la classe `columns-1` che restringe il contenuto con un padding a destra del 25%.
+
+Utile per:
+- Testi più leggibili
+- Focus sul contenuto
+- Presentazioni narrative
+
+---
+
+<!-- _class: columns-2 -->
+
+<div>
+
+### Colonna Sinistra
+
+- Punto 1
+- Punto 2
+- Punto 3
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+</div>
+
+<div>
+
+### Colonna Destra
+
+- Punto A
+- Punto B
+- Punto C
+
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+</div>
+
+---
+
+<!-- _class: columns-3 -->
+
+
+
+<div>
+
+### Colonna 1
+
+- Punto 1
+- Punto 2
+- Punto 3
+
+</div>
+
+<div>
+
+### Colonna 2
+
+- Punto A
+- Punto B
+- Punto C
+
+</div>
+
+<div>
+
+### Colonna 3
+
+- Punto X
+- Punto Y
+- Punto Z
+
+</div>
+
+---
+
+<!-- _class: columns-4 -->
+
+
+<div>
+
+**Q1**
+
+Dati primo trimestre
+
+</div>
+
+<div>
+
+**Q2**
+
+Dati secondo trimestre
+
+</div>
+
+<div>
+
+**Q3**
+
+Dati terzo trimestre
+
+</div>
+
+<div>
+
+**Q4**
+
+Dati quarto trimestre
+
+</div>
+
+---
+
+<!-- _class: chapter -->
+<!-- _paginate: skip -->
+
+# 2. Layout di Base (custom)
 
 ---
 
@@ -146,7 +267,7 @@ E qui altro contenuto complementare:
 <!-- _class: chapter -->
 <!-- _paginate: skip -->
 
-# 2. Elementi Speciali
+# 3. Elementi Speciali
 
 ---
 
@@ -158,21 +279,17 @@ Il template supporta <mark>elementi chiave</mark> che catturano l'attenzione.
 
 ---
 
-# Testi di Dimensioni Diverse
+# Testi di Dimensioni Diverse (titolo)
 
-<div class="small-text">
+## Sottotitolo
 
-Testo piccolo per note, disclaimer o informazioni secondarie.
-
-</div>
+### Testo di terzo livello
 
 Testo normale per il contenuto principale.
 
-<div class="caption">
+<p class="small-text"> Testo piccolo per note, disclaimer o informazioni secondarie.</p>
 
-Testo caption per didascalie o citazioni.
-
-</div>
+<div class="caption">Testo caption per didascalie o citazioni. </div>
 
 ---
 
@@ -186,13 +303,13 @@ Testo caption per didascalie o citazioni.
 
 Separatore orizzontale per dividere sezioni:
 
----
+<hr>
 
 **Prima sezione**
 
 Contenuto della prima parte
 
----
+<hr>
 
 **Seconda sezione**
 
@@ -205,12 +322,14 @@ Contenuto della seconda parte
 
 # Slide Titolo Sezione
 
+![bg](https://images.unsplash.com/photo-1557683316-973673baf926?w=1200)
+
 ---
 
 <!-- _class: chapter -->
 <!-- _paginate: skip -->
 
-# 3. Immagini e Media
+# 4. Immagini e Media
 
 ---
 
@@ -263,7 +382,7 @@ Didascalia dell'immagine
 <!-- _class: chapter -->
 <!-- _paginate: skip -->
 
-# 4. Tabelle e Dati
+# 5. Tabelle e Dati
 
 ---
 
@@ -299,7 +418,7 @@ Esempio di tabella con dati
 <!-- _class: chapter -->
 <!-- _paginate: skip -->
 
-# 5. Chart Interattivi
+# 6. Chart Interattivi
 
 ---
 
@@ -355,7 +474,7 @@ insertChartFromSpec('example-chart', {
 <!-- _class: chapter -->
 <!-- _paginate: skip -->
 
-# 6. Best Practices
+# 7. Best Practices
 
 ---
 
@@ -409,7 +528,6 @@ insertChartFromSpec('example-chart', {
 
 Ricorda di:
 - Usare **alto contrasto** tra testo e sfondo
-- Fornire **alt text** per le immagini
 - Usare **dimensioni leggibili** (min 18pt)
 - Limitare le **animazioni** eccessive
 - Testare su **diversi dispositivi**
@@ -419,7 +537,7 @@ Ricorda di:
 <!-- _class: chapter -->
 <!-- _paginate: skip -->
 
-# 7. Varianti di Tema
+# 8. Varianti di Tema
 
 ---
 
