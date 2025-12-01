@@ -1,7 +1,7 @@
 # Configurazione Marp per export CLI
-inputDir: .
+# inputDir: .  # Commentato per permettere export di file singoli
 themeSet:
-  - template/themes/master.scss
-  - template/themes/alma.scss
+  - ./template/themes/master.scss
+  - ./template/themes/alma.scss
 html: true
 allowLocalFiles: true
