@@ -6,21 +6,34 @@ Questa guida e` per chi vuole fare un uso avanzato dello starter o lavorare sui 
 
 Lo starter deve restare stabile per chi scrive presentazioni. Il submodule `template` contiene temi, font e utility ed e` il posto giusto per chi sviluppa o modifica l'aspetto grafico.
 
+Inoltre, lo starter contiene gli asset dei contenuti delle presentazioni nella root `assets/`.
+
 ## Flusso consigliato
 
-1. Clona il repository con i submodule.
-2. Usa lo starter per creare la presentazione.
-3. Apri `template/` separatamente solo se devi lavorare sui temi.
-4. Aggiorna il puntatore del submodule nello starter solo quando vuoi pubblicare una nuova versione stabile.
+1. Crea il tuo repository da GitHub Template.
+2. Inizializza i submodule.
+3. Usa lo starter per creare la presentazione.
+4. Apri `template/` separatamente solo se devi lavorare sui temi.
+5. Aggiorna il puntatore del submodule nello starter solo quando vuoi pubblicare una nuova versione stabile.
+
+Da CLI (GitHub CLI):
 
 ```bash
-git clone --recurse-submodules https://github.com/danielefadda/marp-slides-starter.git mio-progetto
-cd mio-progetto
+gh repo create PROJECT_slides --template danielefadda/marp-slides-starter --private --clone
+cd PROJECT_slides
+git submodule update --init --recursive
+```
+
+Da GitHub Web (`Use this template`), dopo il clone locale esegui:
+
+```bash
+cd PROJECT_slides
+git submodule update --init --recursive
 ```
 
 ## Stabilita` dello starter
 
-Per default lo starter resta fermo alla versione del submodule che hai clonato.
+Per default lo starter resta fermo alla versione del submodule registrata nel template quando hai creato il repository.
 
 Se il submodule e` gia` presente e vuoi solo riallinearlo allo stato registrato dal repository principale:
 
@@ -48,6 +61,21 @@ Usa questo flusso solo quando vuoi adottare davvero la nuova versione del templa
 4. Aggiorna automaticamente la configurazione con il task `Marp: Sync themes from themes/`.
 5. Se preferisci, puoi anche modificare manualmente `template/.vscode/settings.json`.
 
+### Regola obbligatoria
+
+Quando crei un nuovo progetto (es. `PROJECT_slides`), crea prima il nuovo tema nel submodule `template/` e solo dopo aggiorna la configurazione dello starter per usarlo.
+
+Esempio rapido:
+
+```bash
+cd template
+cp themes/master.scss themes/project.scss
+```
+
+Poi aggiorna:
+- `.vscode/settings.json` nello starter
+- `.marprc.yml` nello starter
+
 Nel template la lista dei temi viene tenuta sincronizzata in modo conservativo: lo script aggiunge i temi mancanti e non rimuove quelli gia` presenti.
 
 ## Creare una presentazione
@@ -60,6 +88,8 @@ Nel template la lista dei temi viene tenuta sincronizzata in modo conservativo: 
 ## Buone pratiche
 
 - Tieni il lavoro sui temi nel submodule, non nello starter.
+- In `template/assets/` salva solo asset di tema (font, logo footer, elementi brand condivisi).
+- In `assets/` dello starter salva solo asset della presentazione (immagini contenuto, chart JSON e fallback).
 - Non aggiornare il submodule senza una ragione precisa.
 - Usa `esempio.md` solo come riferimento.
 - Mantieni il file `.vscode/settings.json` dello starter semplice e orientato a chi crea slide.

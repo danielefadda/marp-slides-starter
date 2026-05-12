@@ -36,7 +36,7 @@ paginate: true
 </div>
 
 <div class="cover-image">
-  <img src="https://marp.app/assets/marp.svg" alt="" style="width:60%">
+  <img src="assets/images/marp-logo.svg" alt="" style="width:60%">
 </div>
 
 ---
@@ -322,7 +322,7 @@ Contenuto della seconda parte
 
 # Slide Titolo Sezione
 
-![bg](https://images.unsplash.com/photo-1557683316-973673baf926?w=1200)
+![bg](assets/images/background-01.svg)
 
 ---
 
@@ -337,7 +337,7 @@ Contenuto della seconda parte
 
 Le immagini possono essere centrate usando `![center]`:
 
-![center width:400px](https://marp.app/assets/marp.svg)
+![center width:400px](assets/images/marp-logo.svg)
 
 <div class="caption">
 Didascalia dell'immagine
@@ -351,7 +351,7 @@ Didascalia dell'immagine
 
 <div>
 
-![width:300px](https://marp.app/assets/marp.svg)
+![width:300px](assets/images/marp-logo.svg)
 
 <div class="caption">Prima immagine</div>
 
@@ -359,7 +359,7 @@ Didascalia dell'immagine
 
 <div>
 
-![width:300px](https://marp.app/assets/marp.svg)
+![width:300px](assets/images/marp-logo.svg)
 
 <div class="caption">Seconda immagine</div>
 
@@ -375,7 +375,7 @@ Didascalia dell'immagine
 
 ## Sottotitolo opzionale
 
-![bg](https://images.unsplash.com/photo-1557683316-973673baf926?w=1200)
+![bg](assets/images/background-01.svg)
 
 ---
 
@@ -442,27 +442,11 @@ Esempio di chart interattivo (visibile solo nella versione HTML):
 
 <div class="interactive-chart" id="example-chart"></div>
 <div class="img-chart">
-  <img src="https://via.placeholder.com/400x300?text=Chart+Placeholder" alt="Chart fallback"/>
+  <img src="assets/charts/example-chart-fallback.svg" alt="Chart fallback"/>
 </div>
 
 <script>
-// Esempio di chart inline
-insertChartFromSpec('example-chart', {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {
-    "values": [
-      {"category": "A", "value": 28},
-      {"category": "B", "value": 55},
-      {"category": "C", "value": 43},
-      {"category": "D", "value": 91}
-    ]
-  },
-  "mark": "bar",
-  "encoding": {
-    "x": {"field": "category", "type": "nominal"},
-    "y": {"field": "value", "type": "quantitative"}
-  }
-}, '100%', '300px');
+insertChart('example-chart', './assets/charts/example-chart.json', '100%', '300px');
 </script>
 
 </div>
@@ -565,7 +549,7 @@ theme: alma  # invece di master
 
 ## Inizia a creare le tue presentazioni
 
-![bg opacity:0.3](https://images.unsplash.com/photo-1557683311-eac922347aa1?w=1200)
+![bg opacity:0.3](assets/images/background-02.svg)
 
 ---
 
@@ -599,4 +583,4 @@ theme: alma  # invece di master
 
 # Buon lavoro! 🚀
 
-![bg](https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200)
+![bg](assets/images/background-03.svg)

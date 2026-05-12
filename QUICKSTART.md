@@ -4,14 +4,40 @@ Guida completa per iniziare a creare presentazioni con questo template.
 
 ## 🚀 Setup (già fatto!)
 
-Se hai clonato questo repository con `--recurse-submodules`, tutto è già configurato:
+Soluzione 1: usare CLI con il comando `gh repo create` con `--template` (sostituisci `PROJECT_slides` con il nome del tuo nuovo repository), poi inizializzare i submodule:
+
+```bash
+gh repo create PROJECT_slides --template danielefadda/marp-slides-starter --private --clone
+cd PROJECT_slides
+git submodule update --init --recursive
+```
+
+Soluzione 2: Se preferisci usare il flusso Web con **Use this template**, dopo il clone esegui sempre:
+
+```bash
+git submodule update --init --recursive
+```
 
 ✅ VS Code settings (`.vscode/settings.json`)  
 ✅ Configurazione Marp CLI (`.marprc.yml`)  
 ✅ Template con temi e font (`template/`)  
+✅ Cartelle assets progetto (`assets/images`, `assets/charts`)  
 ✅ File esempio (`esempio.md`)
 
-Lo starter resta sulla versione del submodule che hai clonato. Se vuoi una nuova versione del template, aggiornala in modo esplicito e controllato.
+Lo starter resta sulla versione del submodule registrata nel template al momento della creazione. Se vuoi una nuova versione del template, aggiornala in modo esplicito e controllato.
+
+## 📦 Regola Assets (importante)
+
+- `template/assets/` contiene solo risorse condivise del tema (es. font, logo footer, elementi brand del tema).
+- `assets/` nella root dello starter contiene asset della singola presentazione.
+
+Struttura consigliata:
+
+```text
+assets/
+  images/
+  charts/
+```
 
 ## 📝 Creare una Nuova Presentazione
 
@@ -51,7 +77,7 @@ paginate: true
 </div>
 
 <div class="cover-image">
-  <img src="path/to/logo.png" alt="" style="width:60%">
+  <img src="assets/images/logo.png" alt="" style="width:60%">
 </div>
 
 ---
@@ -183,7 +209,7 @@ Contenuto
 
 # Titolo Sovrapposto
 
-![bg](path/to/image.jpg)
+![bg](assets/images/image.jpg)
 ```
 
 ### Evidenziare Testo
@@ -222,7 +248,7 @@ theme: master
 
 ### 2. Crea una specifica Vega-Lite
 
-Crea `charts/vendite.json`:
+Crea `assets/charts/vendite.json`:
 
 ```json
 {
@@ -260,11 +286,11 @@ Crea `charts/vendite.json`:
 
 <div class="interactive-chart" id="vendite-chart"></div>
 <div class="img-chart">
-  <img src="charts/vendite.png" alt="Vendite mensili"/>
+  <img src="assets/charts/vendite.png" alt="Vendite mensili"/>
 </div>
 
 <script>
-  insertChart('vendite-chart', './charts/vendite.json', '100%', '300px');
+  insertChart('vendite-chart', './assets/charts/vendite.json', '100%', '300px');
 </script>
 
 </div>
@@ -317,24 +343,24 @@ paginate: false
 # Diverse dimensioni
 
 ![width:300px](image.jpg)
-![w:50%](image.jpg)
-![height:200px](image.jpg)
+![w:50%](assets/images/image.jpg)
+![height:200px](assets/images/image.jpg)
 ```
 
 ### Centrare Immagini
 
 ```markdown
-![center](image.jpg)
-![center w:400](image.jpg)
+![center](assets/images/image.jpg)
+![center w:400](assets/images/image.jpg)
 ```
 
 ### Immagini Background
 
 ```markdown
-![bg](image.jpg)                    # Full screen
-![bg right](image.jpg)              # Metà destra
-![bg left:40%](image.jpg)           # 40% sinistra
-![bg opacity:0.3](image.jpg)        # Con trasparenza
+![bg](assets/images/image.jpg)                    # Full screen
+![bg right](assets/images/image.jpg)              # Meta` destra
+![bg left:40%](assets/images/image.jpg)           # 40% sinistra
+![bg opacity:0.3](assets/images/image.jpg)        # Con trasparenza
 ```
 
 ### Tabelle

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Example chart fallback">
+  <rect width="800" height="480" fill="#ffffff"/>
+  <rect x="90" y="70" width="670" height="330" fill="#f8f8fc" stroke="#d9d9e8"/>
+  <line x1="130" y1="370" x2="720" y2="370" stroke="#555"/>
+  <line x1="130" y1="110" x2="130" y2="370" stroke="#555"/>
+  <rect x="180" y="280" width="90" height="90" fill="#1b1464"/>
+  <rect x="320" y="190" width="90" height="180" fill="#1b1464"/>
+  <rect x="460" y="225" width="90" height="145" fill="#1b1464"/>
+  <rect x="600" y="95" width="90" height="275" fill="#de1f36"/>
+  <text x="178" y="402" font-size="22" font-family="IBM Plex Sans, Arial, sans-serif">A</text>
+  <text x="318" y="402" font-size="22" font-family="IBM Plex Sans, Arial, sans-serif">B</text>
+  <text x="458" y="402" font-size="22" font-family="IBM Plex Sans, Arial, sans-serif">C</text>
+  <text x="598" y="402" font-size="22" font-family="IBM Plex Sans, Arial, sans-serif">D</text>
+  <text x="90" y="45" font-size="28" font-family="IBM Plex Sans, Arial, sans-serif" fill="#1b1464">Chart fallback (PDF)</text>
+</svg>
