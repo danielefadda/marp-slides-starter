@@ -1,6 +1,8 @@
 # Marp Slides Starter
 
-🚀 Progetto starter completo per creare presentazioni professionali con [Marp](https://marp.app/).
+🚀 Progetto template di partenza completo per creare e testare il template delle presentazioni professionali con [Marp](https://marp.app/).
+
+Questo repository serve come template di partenza e come raccolta di esempi. Le presentazioni reali vanno create nei nuovi repository generati da questo template.
 
 ## ✨ Features
 
@@ -48,7 +50,7 @@ Installa l'estensione [Marp for VS Code](https://marketplace.visualstudio.com/it
 2. Premi **Cmd/Ctrl + K, V** per l'anteprima Marp
 3. Esplora le 30+ slide di esempio
 
-### 4. Crea la tua presentazione
+### 4. Crea la tua presentazione nel nuovo repository
 
 Crea un nuovo file `.md` con:
 
@@ -99,11 +101,11 @@ mio-progetto/
     └── js/
 ```
 
-Se vuoi lavorare sui temi, apri il submodule `template/` come progetto separato. Lo starter resta dedicato a chi scrive presentazioni.
+Se vuoi lavorare sui temi, apri il submodule `template/` come progetto separato. Questo repository di partenza resta dedicato agli esempi e alla configurazione iniziale, non alle presentazioni finali.
 
 ## 🧱 Creare un nuovo repository da questo starter (PROJECT_slides)
 
-Usa questo flusso quando vuoi avviare un nuovo repository per un progetto di presentazioni.
+Usa questo flusso quando vuoi avviare un nuovo repository per un progetto di presentazioni. Il contenuto finale della presentazione va scritto nel repository appena creato, non in questo repository di partenza.
 
 ### 1. Crea il repository remoto
 

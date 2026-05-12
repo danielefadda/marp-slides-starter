@@ -1,20 +1,22 @@
 # Advanced Workflow
 
-Questa guida e` per chi vuole fare un uso avanzato dello starter o lavorare sui temi nel submodule `template/`.
+Questa guida e` per chi vuole fare un uso avanzato del repository di partenza o lavorare sui temi nel submodule `template/`.
 
 ## Obiettivo
 
-Lo starter deve restare stabile per chi scrive presentazioni. Il submodule `template` contiene temi, font e utility ed e` il posto giusto per chi sviluppa o modifica l'aspetto grafico.
+Il repository di partenza deve restare stabile come template e raccolta di esempi. Il submodule `template` contiene temi, font e utility ed e` il posto giusto per chi sviluppa o modifica l'aspetto grafico.
 
-Inoltre, lo starter contiene gli asset dei contenuti delle presentazioni nella root `assets/`.
+Le presentazioni vere e proprie vanno create nei repository nuovi generati da questo template, non nello starter.
+
+Inoltre, il repository di partenza contiene gli asset dei contenuti delle presentazioni nella root `assets/`.
 
 ## Flusso consigliato
 
 1. Crea il tuo repository da GitHub Template.
 2. Inizializza i submodule.
-3. Usa lo starter per creare la presentazione.
+3. Usa il repository generato dal template per creare la presentazione.
 4. Apri `template/` separatamente solo se devi lavorare sui temi.
-5. Aggiorna il puntatore del submodule nello starter solo quando vuoi pubblicare una nuova versione stabile.
+5. Aggiorna il puntatore del submodule nel repository di partenza solo quando vuoi pubblicare una nuova versione stabile.
 
 Da CLI (GitHub CLI):
 
@@ -31,9 +33,9 @@ cd PROJECT_slides
 git submodule update --init --recursive
 ```
 
-## Stabilita` dello starter
+## Stabilita` del repository di partenza
 
-Per default lo starter resta fermo alla versione del submodule registrata nel template quando hai creato il repository.
+Per default il repository di partenza resta fermo alla versione del submodule registrata nel template quando hai creato il repository.
 
 Se il submodule e` gia` presente e vuoi solo riallinearlo allo stato registrato dal repository principale:
 
@@ -63,7 +65,7 @@ Usa questo flusso solo quando vuoi adottare davvero la nuova versione del templa
 
 ### Regola obbligatoria
 
-Quando crei un nuovo progetto (es. `PROJECT_slides`), crea prima il nuovo tema nel submodule `template/` e solo dopo aggiorna la configurazione dello starter per usarlo.
+Quando crei un nuovo progetto (es. `PROJECT_slides`), crea prima il nuovo tema nel submodule `template/` e solo dopo aggiorna la configurazione del repository di partenza per usarlo.
 
 Esempio rapido:
 
@@ -73,27 +75,27 @@ cp themes/master.scss themes/project.scss
 ```
 
 Poi aggiorna:
-- `.vscode/settings.json` nello starter
-- `.marprc.yml` nello starter
+- `.vscode/settings.json` nel repository di partenza
+- `.marprc.yml` nel repository di partenza
 
 Nel template la lista dei temi viene tenuta sincronizzata in modo conservativo: lo script aggiunge i temi mancanti e non rimuove quelli gia` presenti.
 
-## Creare una presentazione
+## Creare una presentazione nel repository nuovo
 
-1. Crea un nuovo file Markdown nella root dello starter.
+1. Crea un nuovo file Markdown nella root del repository appena generato dal template.
 2. Usa un tema disponibile, per esempio `master`, `alma` o `mobility`.
 3. Scrivi il contenuto della presentazione.
 4. Esporta o fai preview da VS Code.
 
 ## Buone pratiche
 
-- Tieni il lavoro sui temi nel submodule, non nello starter.
+- Tieni il lavoro sui temi nel submodule, non nel repository di partenza.
 - In `template/assets/` salva solo asset di tema (font, logo footer, elementi brand condivisi).
-- In `assets/` dello starter salva solo asset della presentazione (immagini contenuto, chart JSON e fallback).
+- In `assets/` del repository di partenza salva solo asset della presentazione (immagini contenuto, chart JSON e fallback).
 - Non aggiornare il submodule senza una ragione precisa.
 - Usa `esempio.md` solo come riferimento.
-- Mantieni il file `.vscode/settings.json` dello starter semplice e orientato a chi crea slide.
-- Aggiorna lo starter solo dopo aver validato il template nel repo `template`.
+- Mantieni il file `.vscode/settings.json` del repository di partenza semplice e orientato a chi crea slide.
+- Aggiorna il repository di partenza solo dopo aver validato il template nel repo `template`.
 
 ## Cose da evitare
 

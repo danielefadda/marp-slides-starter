@@ -2,6 +2,8 @@
 
 Guida completa per iniziare a creare presentazioni con questo template.
 
+Questo repository di partenza contiene esempi e configurazione iniziale. Le presentazioni vere e proprie vanno create nel nuovo repository generato da questo template.
+
 ## 🚀 Setup (già fatto!)
 
 Soluzione 1: usare CLI con il comando `gh repo create` con `--template` (sostituisci `PROJECT_slides` con il nome del tuo nuovo repository), poi inizializzare i submodule:
@@ -39,9 +41,9 @@ assets/
   charts/
 ```
 
-## 📝 Creare una Nuova Presentazione
+## 📝 Creare una Nuova Presentazione nel repository nuovo
 
-### 1. Crea il file markdown
+### 1. Crea il file markdown nel repository nuovo
 
 Crea `mia-lezione.md` nella root del progetto:
 
