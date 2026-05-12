@@ -11,6 +11,8 @@ Se hai clonato questo repository con `--recurse-submodules`, tutto è già confi
 ✅ Template con temi e font (`template/`)  
 ✅ File esempio (`esempio.md`)
 
+Lo starter resta sulla versione del submodule che hai clonato. Se vuoi una nuova versione del template, aggiornala in modo esplicito e controllato.
+
 ## 📝 Creare una Nuova Presentazione
 
 ### 1. Crea il file markdown
@@ -83,8 +85,10 @@ Altro contenuto...
 
 **Da terminale:**
 ```bash
-npx @marp-team/marp-cli mia-lezione.md -o mia-lezione.pdf
+marp mia-lezione.md -o mia-lezione.pdf
 ```
+
+Se non usi il terminale, puoi ignorare del tutto questa parte e restare solo con l'anteprima ed export da VS Code.
 
 ## 🎨 Layout e Classi
 
@@ -356,10 +360,21 @@ Usa per promemoria o dettagli extra.
 Quando ci sono nuove versioni del template:
 
 ```bash
+git submodule update --init --recursive
+```
+
+Se vuoi adottare davvero l'ultima versione del template nel repository remoto:
+
+```bash
+cd template
+git pull origin main
+cd ..
 git submodule update --remote template
 git add template
 git commit -m "Update template to latest version"
 ```
+
+Usa questo flusso solo quando vuoi passare a una nuova versione stabile del template. Per il resto, lo starter rimane fermo alla versione clonata.
 
 ## 🐛 Troubleshooting
 
@@ -385,8 +400,8 @@ theme: master  # Non "Master" o "theme: master.scss"
 
 Installa Chromium o Chrome se richiesto:
 ```bash
-npx @marp-team/marp-cli --version
-# Seguire le istruzioni per installare il browser
+marp --version
+# Seguire le istruzioni del browser installato
 ```
 
 ## 📚 Prossimi Passi
@@ -406,6 +421,7 @@ npx @marp-team/marp-cli --version
 
 - **Template themes/fonts**: [marp-template](https://github.com/danielefadda/marp-template)
 - **Questo starter**: [marp-slides-starter](https://github.com/danielefadda/marp-slides-starter)
+- **Guida avanzata**: [ADVANCED.md](ADVANCED.md)
 
 ---
 

@@ -4,7 +4,7 @@
 
 ## ✨ Features
 
-- 🎨 **2 Temi personalizzati** (Master blue/red, Alma yellow/black)
+- 🎨 **Temi personalizzati versionati nel submodule** (Master, Alma, Mobility)
 - 🔤 **Font professionali** (IBM Plex Sans/Mono, Sofia Sans)
 - 📊 **Chart Vega-Lite** interattivi con fallback PDF
 - 📐 **Layout flessibili** (colonne, cover, chapter, all-image)
@@ -19,6 +19,8 @@
 git clone --recurse-submodules https://github.com/danielefadda/marp-slides-starter.git mio-progetto
 cd mio-progetto
 ```
+
+Lo starter resta bloccato alla versione del submodule clonata in quel momento. Aggiorna il puntatore solo quando vuoi adottare una nuova versione stabile del template.
 
 ### 2. Installa Marp per VS Code
 
@@ -72,10 +74,13 @@ mio-progetto/
 └── template/              # Git submodule (temi, font, js)
     ├── themes/
     │   ├── master.scss
-    │   └── alma.scss
+  │   ├── alma.scss
+  │   └── mobility.scss
     ├── assets/fonts/
     └── js/
 ```
+
+Se vuoi lavorare sui temi, apri il submodule `template/` come progetto separato. Lo starter resta dedicato a chi scrive presentazioni.
 
 ## 🎨 Temi Disponibili
 
@@ -119,16 +124,7 @@ Usa con: `<!-- _class: cover -->`
 
 ### Da CLI
 
-```bash
-# HTML interattivo
-npx @marp-team/marp-cli slides.md -o output.html
-
-# PDF
-npx @marp-team/marp-cli slides.md -o output.pdf --allow-local-files
-
-# Tutti i file .md nella cartella
-npx @marp-team/marp-cli *.md
-```
+Se usi Marp CLI da terminale, puoi esportare anche da riga di comando con i comandi standard di Marp.
 
 ## 📊 Chart Vega-Lite (opzionale)
 
@@ -136,13 +132,26 @@ Per aggiungere chart interattivi, vedi **[QUICKSTART.md](QUICKSTART.md)** sezion
 
 ## 🔄 Aggiornare il Template
 
-Il template è importato come Git submodule. Per aggiornarlo:
+Il template è importato come Git submodule ed e` pensato per restare stabile fino a un aggiornamento esplicito.
+
+Per riallinearti alla versione registrata dal repository principale:
 
 ```bash
+git submodule update --init --recursive
+```
+
+Per adottare una nuova versione del template in modo intenzionale:
+
+```bash
+cd template
+git pull origin main
+cd ..
 git submodule update --remote template
 git add template
 git commit -m "Update template to latest version"
 ```
+
+Per un flusso piu` dettagliato vedi [ADVANCED.md](ADVANCED.md).
 
 ## 💡 Tips
 
@@ -159,16 +168,18 @@ footer: "Lezione d'uso"  # ✅ OK
 ## 📚 Documentazione
 
 - **[QUICKSTART.md](QUICKSTART.md)** - Guida completa passo-passo
+- **[ADVANCED.md](ADVANCED.md)** - Workflow avanzato per temi e manutenzione
 - **[esempio.md](esempio.md)** - 30+ slide demo con tutti i layout
 - **[template/README.md](template/README.md)** - Dettagli tecnici del template
 
 ## 🤝 Contribuire
 
-Vuoi migliorare i temi o aggiungere funzionalità?
+Vuoi migliorare i temi o aggiungere funzionalità al template?
 
-1. Fork del repository [marp-template](https://github.com/danielefadda/marp-template)
-2. Crea le tue modifiche
-3. Apri una Pull Request
+1. Apri il repository [template](template)
+2. Lavora sui file in `template/themes/`
+3. Segui le indicazioni in [ADVANCED.md](ADVANCED.md)
+4. Apri una Pull Request nel repository [marp-template](https://github.com/danielefadda/marp-template)
 
 ## 📄 Licenza
 
