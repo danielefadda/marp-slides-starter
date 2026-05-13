@@ -1,8 +1,8 @@
 ---
 marp: true
-theme: base
+theme: iaia
 header: '<strong>Marp Template Demo</strong> | Daniele Fadda'
-footer: "Esempio d'uso <mark>DEMO</mark>"
+footer: "La cooperazione al cuore del Mediterraneo - La coopération au cœur de la Méditerranée"
 paginate: true
 ---
 
@@ -14,10 +14,9 @@ paginate: true
 
 
 <!-- _class: cover -->
-<!-- _paginate: skip -->
 
 <div>
-  <h1>Marp Template</h1>
+  <h1>Template Demo IAIA</h1>
   <h2>Esempio di Presentazione</h2>
 
   <div class="authors">
@@ -29,9 +28,9 @@ paginate: true
   </div>
 
   <div class="university">
-    <strong>Marp Template v1.0</strong><br>
+    <strong>Contatto e altre info</strong><br>
     Template per presentazioni professionali<br>
-    Anno: 2025    
+    Anno: 2026    
   </div>
 </div>
 
@@ -39,11 +38,15 @@ paginate: true
   <img src="assets/images/marp-logo.svg" alt="" style="width:60%">
 </div>
 
+
 ---
 
 # Benvenuto! 👋
 
-Questo è un esempio di presentazione creata con il **Marp Template**.
+
+
+Questo è un esempio di presentazione creata con il **Marp Template**. 
+
 
 Il template include:
 - ✨ Temi personalizzati
@@ -52,10 +55,9 @@ Il template include:
 - 📐 Layout flessibili
 - 🖼️ Classi predefinite per slide speciali
 
+
 ---
 
-<!-- _class: chapter -->
-<!-- _paginate: skip -->
 
 # 1. Layout di Base (sections)
 
@@ -175,8 +177,6 @@ Dati quarto trimestre
 
 ---
 
-<!-- _class: chapter -->
-<!-- _paginate: skip -->
 
 # 2. Layout di Base (custom)
 
@@ -264,7 +264,7 @@ E qui altro contenuto complementare:
 
 ---
 
-<!-- _class: chapter -->
+
 <!-- _paginate: skip -->
 
 # 3. Elementi Speciali
@@ -315,6 +315,13 @@ Contenuto della prima parte
 
 Contenuto della seconda parte
 
+<hr>
+
+**Terza sezione**
+
+Contenuto della terza parte
+
+
 ---
 
 <!-- _class: title-slide -->
@@ -326,8 +333,7 @@ Contenuto della seconda parte
 
 ---
 
-<!-- _class: chapter -->
-<!-- _paginate: skip -->
+
 
 # 4. Immagini e Media
 
@@ -415,8 +421,6 @@ Esempio di tabella con dati
 
 ---
 
-<!-- _class: chapter -->
-<!-- _paginate: skip -->
 
 # 6. Chart Interattivi
 
@@ -424,11 +428,11 @@ Esempio di tabella con dati
 
 # Chart Vega-Lite
 
-Esempio di chart interattivo (visibile solo nella versione HTML):
-
 <div class="columns-2">
 
 <div>
+
+Esempio di chart interattivo (visibile solo nella versione HTML):
 
 **Caratteristiche:**
 - Interattivo su HTML
@@ -440,7 +444,7 @@ Esempio di chart interattivo (visibile solo nella versione HTML):
 
 <div>
 
-<div class="interactive-chart" id="example-chart"></div>
+<div class="interactive-chart" id="example-chart" style="width: 400px; height: 300px;"></div>
 <div class="img-chart">
   <img src="assets/charts/example-chart-fallback.svg" alt="Chart fallback"/>
 </div>

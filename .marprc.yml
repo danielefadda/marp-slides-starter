@@ -3,5 +3,6 @@
 themeSet:
   - ./template/themes/master.scss
   - ./template/themes/alma.scss
+  - ./template/themes/iaia.scss
 html: true
 allowLocalFiles: true

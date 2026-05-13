@@ -9,8 +9,12 @@
     ]
   },
   "mark": "bar",
+  "width": "container",
+  "height": 300,
   "encoding": {
     "x": {"field": "category", "type": "nominal"},
-    "y": {"field": "value", "type": "quantitative"}
+    "y": {"field": "value", "type": "quantitative"},
+    "tooltip": {"field": "value", "type": "quantitative"},
+    "color": {"field": "category", "type": "nominal"}
   }
 }
